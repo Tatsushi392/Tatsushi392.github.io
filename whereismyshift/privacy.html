@@ -32,7 +32,7 @@
       <li><strong>招待</strong>：管理者が招待した人のメールアドレス、役割、有効期限、使用済みかどうか。招待コードそのものは保存せず、照合用の値だけを保存します。</li>
       <li><strong>シフト</strong>：勤務の日時、休憩時間、メモ、公開状態、変更履歴（いつ・誰が・どのシフトを変えたか）、変更のお知らせ。</li>
       <li><strong>勤務パターン</strong>：店舗やスタッフごとの標準の勤務時間。</li>
-      <li><strong>定期購読</strong>：店舗の購読の状態（有効期限など）。</li>
+      <li><strong>定期購読</strong>：管理者本人の購読の状態（有効期限など）。</li>
       <li><strong>端末内の設定</strong>：表示方法、表示中の店舗。端末の中にだけ保存し、本アプリを削除すると消えます。</li>
     </ul>
     <p>本アプリは広告、位置情報、連絡先、写真、利用状況の解析ツールを使用しません。</p>
@@ -51,7 +51,7 @@
     <ul>
       <li><strong>Google Firebase</strong>（Authentication、Cloud Firestore、Cloud Functions）：アカウントとデータの保存・処理に使います。データはオーストラリア（シドニー）のデータセンターに保存されます。</li>
       <li><strong>Apple App Store / Google Play</strong>：定期購読の支払いを処理します。開発者が支払い情報を受け取ることはありません。</li>
-      <li><strong>RevenueCat</strong>：定期購読が有効かどうかの確認に使います。購入の記録と、店舗またはアカウントに結びつけた識別子が送られます。氏名やメールアドレスは送りません。</li>
+      <li><strong>RevenueCat</strong>：定期購読が有効かどうかの確認に使います。購入の記録と、アカウントの識別子（Firebase UID）が送られます。氏名やメールアドレスは送りません。</li>
     </ul>
 
     <h3 id="ja-delete">5. アカウントの削除</h3>
@@ -84,7 +84,7 @@
       <li><strong>Invites</strong>: the email address of the invited person, role, expiry and whether it has been used. The invite code itself is not stored, only a value used to check it.</li>
       <li><strong>Shifts</strong>: shift dates and times, breaks, notes, publication status, change history (when, who and which shift was changed) and change notices.</li>
       <li><strong>Shift patterns</strong>: standard shift times for the store or for each staff member.</li>
-      <li><strong>Subscription</strong>: the store's subscription status, such as its expiry.</li>
+      <li><strong>Subscription</strong>: the manager’s subscription status, such as its expiry.</li>
       <li><strong>Settings on your device</strong>: view options and the current store. These are stored only on your device and are removed when you delete the app.</li>
     </ul>
     <p>The app uses no advertising, location, contacts, photos or usage analytics.</p>
@@ -103,7 +103,7 @@
     <ul>
       <li><strong>Google Firebase</strong> (Authentication, Cloud Firestore, Cloud Functions): stores and processes accounts and data. Data is stored in a data center in Australia (Sydney).</li>
       <li><strong>Apple App Store / Google Play</strong>: handle subscription payments. The developer never receives your payment details.</li>
-      <li><strong>RevenueCat</strong>: checks whether a subscription is active. It receives purchase records and an identifier linked to the store or account. Names and email addresses are not sent.</li>
+      <li><strong>RevenueCat</strong>: checks whether a subscription is active. It receives purchase records and the account’s Firebase user ID. Names and email addresses are not sent.</li>
     </ul>
 
     <h3 id="en-delete">5. Deleting your account</h3>
